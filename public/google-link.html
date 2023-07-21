@@ -59,7 +59,7 @@ limitations under the License.
       function toggleSignIn() {
         var provider = new firebase.auth.GoogleAuthProvider();
         auth.currentUser
-          .linkWithPopup(provider)
+          .linkWithRedirect(provider)
           .then((result) => {
             // Accounts successfully linked.
             var credential = result.credential;
